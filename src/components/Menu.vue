@@ -64,6 +64,12 @@
 
 
         </div>
+
+        <div class="etudiant">
+            <img src="./../assets/Puech-Antoine.jpg" id="photoProfil">
+            <p id="nom">Antoine Puech</p>
+        </div>
+        <p id="copyright"> ALV Online - 2020 © Léonard de Vinci </p>
     </div>
 </template>
 
@@ -71,8 +77,9 @@
     export default {
         name: 'Menu',
         props: {
-            student: String
-        }
+            student: String,
+        },
+        
     }
 </script>
 
@@ -81,7 +88,7 @@
 #menu {
     width: 20%;
     background-color: #252C48;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat';
     color: #ffffff;
 }
 #top {
@@ -121,7 +128,8 @@
 
 #button a{
     padding: 0 10px;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #button img {
@@ -137,9 +145,10 @@
 
 #buttons a{
     padding: 0 10px;
-    font-size: 16px;
+    font-size: 15px;
     color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 #buttons img {
@@ -149,16 +158,46 @@
 .categorie{
     margin-bottom: 5px;
     margin-top: 25px;
-    font-size: 11px;
+    font-size: 10px;
     padding: 0 35px;
+    color: lightgrey;
     text-transform: capitalize;
 }
 
 .service{
     margin-bottom: 5px;
     margin-top: 10px;
-    font-size: 11px;
+    font-size: 10px;
     padding: 0 35px;
+    color: lightgrey;
     text-transform: capitalize;
+}
+
+.etudiant {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    align-items: center;
+}
+
+.etudiant #photoProfil {
+    width: 15%;
+    border-radius: 100px;
+    height: 15%;
+    margin: 0 15px;
+}
+
+.etudiant #nom {
+    padding: 0 5px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+#copyright {
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 50%;
+    text-align: center;
+    margin-top: 25px;
 }
 </style>

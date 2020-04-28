@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <Log/>
+    <router-view></router-view>
+    <!-- <router-link to="/Log">Log</router-link>
+    <router-link to="/Dashboard">Dash</router-link> -->
   </div>
 </template>
 
 <script>
-import Log from './pages/Log.vue'
 
 export default {
   name: 'App',
   components: {
-    Log
+
   }
 }
 </script>

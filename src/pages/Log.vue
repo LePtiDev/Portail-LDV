@@ -7,7 +7,7 @@
 
 
       <!-- formulaire -->
-      <form method="POST" action="dashboard.vue">
+      <form action="/Dashboard">
         <fieldset>
           <legend>Identifiant LeoID</legend>
           <input class="input" type="email" name="user_email" id="">
@@ -19,11 +19,13 @@
         </fieldset>
 
         <input class="submit" type="submit" value="Connexion">
+        
       </form>
 
       <!-- oublie de mot de passe -->
 
       <a class="forgot" href="#">Changement de votre mot de passe LeoID</a>
+      
 
       <!-- text info -->
 

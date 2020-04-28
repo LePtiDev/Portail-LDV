@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'dashboard',
+  name: 'Dashboard',
   props: {
     msg: String
   }
@@ -25,6 +25,10 @@ export default {
     .page{
         height: 100vh;
         width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
     }
     
     /* menu */

@@ -7,7 +7,7 @@
 
 
       <!-- formulaire -->
-      <form method="POST">
+      <form method="POST" action="dashboard.vue">
         <fieldset>
           <legend>Identifiant LeoID</legend>
           <input class="input" type="email" name="user_email" id="">

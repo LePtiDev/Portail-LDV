@@ -87,6 +87,7 @@
 
 #menu {
     width: 20%;
+    height: 100vh;
     background-color: #252C48;
     font-family: 'Montserrat';
     color: #ffffff;

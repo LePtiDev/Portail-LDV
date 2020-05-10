@@ -1,5 +1,10 @@
 <template>
-    <div id="menu">
+    
+    <div id="menuAll">
+        <div @click="animation()" class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        <div id="menu">
         <div class="logo">
             <img src="./../assets/IIMLogo.png">
         </div>
@@ -13,14 +18,12 @@
 
             <div id="buttons">
                 <img src="./../assets/empreinte.png">
-                <a id="desktop"> Relevé de présence </a>
-                <a id="mobile"> Présence </a>
+                <a> Relevé de présence </a>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/calendrier.png">
-                <a id="desktop"> Emploie du temps </a>
-                <a id="mobile"> EDT </a>
+                <a> Emploie du temps </a>
             </div>
 
             <div id="buttons">
@@ -35,8 +38,7 @@
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <a id="desktop"> devinci online</a>
-                <a id="mobile"> DVO </a>
+                <a> devinci online</a>
 
             </div>
 
@@ -50,8 +52,7 @@
 
             <div id="buttons">
                 <img src="./../assets/partage.png">
-                <a id="desktop">Occupation des salles</a>
-                <a id="mobile"> Salles </a>
+                <a>Occupation des salles</a>
             </div>
 
             <div id="buttons">
@@ -75,6 +76,7 @@
         <p id="copyright"> ALV Online - 2020 © Léonard de Vinci </p>
         </div>
         </div>
+        </div>
     </div>
     
 </template>
@@ -85,19 +87,95 @@
         props: {
             student: String,
         },
-        
+        methods: {
+            animation: function () {
+                const menuBtn = document.querySelector('.menu-btn');
+                let menuOpen = false;
+                
+                 if(!menuOpen) {
+                    menuBtn.classList.toggle('open');
+                    menuOpen = true;
+                    var element = document.getElementById("menu");
+                    element.classList.toggle("mystyle");
+                }
+            }
+        }
     }
+
 </script>
 
 <style scoped>
 
+/* menu burger */
+.menu-btn {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  z-index: 10;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 35px;
+  height: 8px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+  content: '';
+  position: absolute;
+  width: 50px;
+  height:8px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 8px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  width: 40px;
+  height:8px;
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  width: 40px;
+  height:8px;
+}
+/*/////////////////////////////////*/
 #menu {
     width: 21%;
     height: 100vh;
     background-color: #252C48;
     font-family: 'Montserrat';
     color: #ffffff;
+    transition-duration: 600ms;
+
 }
+
 #top {
     margin: -10px 0;
     border-width: 0.5px;
@@ -131,10 +209,6 @@
     align-items: center;
     padding: 0 10%;
     margin: 15px 0;
-}
-
-#mobile {
-    display: none;
 }
 
 #button a{
@@ -218,7 +292,6 @@
     bottom: 15px;
     left: 30px;
 }
-
 /* responsive design here */
 
 @media screen and (min-width: 790px) and (max-width: 1120px) {
@@ -268,143 +341,68 @@
         margin: 0 10px;
     }
 }
-@media screen and (min-width: 380px) and (max-width: 600px) {
-    #button a{
-        font-size: 7px;
-    }
-    #buttons a{
-        font-size: 6px;
-    }
-    #button img{
-        width: 10px;
-    }
-    #buttons img{
-        width: 10px;
-    }
-    #desktop {
-        display: none;
-    }
-    #mobile{
-        display: initial;
-    }
-    #buttons{
-        height: 32px;
-    }
-    #copyright{
-        font-size: 4px;
-        color: #ffffff;
-        opacity: 50%;
-        text-align: center;
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    #menu{
         position: absolute;
-        bottom: 15px;
-        left: 3px;
+        left: -2000px;
+        width: 100%;
     }
-    .etudiant {
-        left: 5px;
+    .direction{
+        text-align:center;
     }
-    .etudiant #nom {
-        font-size: 6px;
+    .mystyle{
+    width: 100% !important;
+    transition-duration: 500ms;
+    left: 0 !important;
+    transition: 700ms;
     }
-    .etudiant #photoProfil {
-        margin: 0 2px;
+    .menu-btn{
+        display: flex;
     }
-}
-@media screen and (min-width: 340px) and (max-width: 379px) {
+    
+    .logo img {
+        width: 40%;
+    }
     #button a{
-        font-size: 6px;
-        padding: 0 5px;
+        font-size: 12px;
     }
     #buttons a{
-        font-size: 6px;
-        padding: 0 5px;
+        font-size: 12px;
     }
     #button img{
-        width: 8px;
+        width: 15px;
     }
     #buttons img{
-        width: 8px;
-    }
-    #desktop {
-        display: none;
-    }
-    #mobile{
-        display: initial;
+        width: 15px;
     }
     #buttons{
         height: 30px;
+        justify-content: center;
     }
-    .service{
-        font-size: 8px;
-    }
-    .categorie{
-        font-size: 8px
+    #button{
+        justify-content: center;
     }
     #copyright{
-        font-size: 3.3px;
+        font-size: 12px;
         color: #ffffff;
         opacity: 50%;
         text-align: center;
         position: absolute;
         bottom: 15px;
-        left: 5px;
+        left: 22%;
     }
     .etudiant {
-        left: 5px;
+        left: 32%;
     }
     .etudiant #nom {
-        font-size: 6px;
+        font-size: 15px;
     }
     .etudiant #photoProfil {
-        margin: 0;
+        margin: 0 2px;
+        width: 20%;
     }
+
 }
-@media screen and (min-width: 0px) and (max-width: 339px) {
-    #button a{
-        font-size: 5px;
-        padding: 0 5px;
-    }
-    #buttons a{
-        font-size: 5px;
-        padding: 0 5px;
-    }
-    #button img{
-        width: 10px;
-    }
-    #buttons img{
-        width: 10px;
-    }
-    #desktop {
-        display: none;
-    }
-    #mobile{
-        display: initial;
-    }
-    #buttons{
-        height: 26px;
-    }
-    .service{
-        font-size: 8px;
-    }
-    .categorie{
-        font-size: 8px
-    }
-    #copyright{
-        font-size: 3px;
-        color: #ffffff;
-        opacity: 50%;
-        text-align: center;
-        position: absolute;
-        bottom: 15px;
-        left: 2px;
-    }
-    .etudiant {
-        left: 5px;
-    }
-    .etudiant #nom {
-        font-size: 5px;
-    }
-    .etudiant #photoProfil {
-        margin: 0;
-    }
-}
+
+
 </style>

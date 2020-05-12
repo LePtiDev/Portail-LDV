@@ -193,7 +193,7 @@
 #menu {
     width: 21vw;
     height: 100vh;
-    background-color: #252C48;
+    background-color: #242424;
     font-family: 'Montserrat';
     color: #ffffff;
     transition-duration: 600ms;

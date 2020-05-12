@@ -12,7 +12,7 @@
 
             <div class="info1">
 
-                <img src="cobra1.jpg" class="pp" width="100%" height="auto">
+                <img src="../assets/cobra1.jpg" class="pp" width="100%" height="auto">
                 <h3> Antoine DROUIN <br/>
                     <span style="font-weight: normal; font-size: 17px; color: #FF8800"> A2DW1 </span></h3>
                 <button class="modif"> Faire une demande de modifications </button>
@@ -123,6 +123,13 @@
         color: #FFFFFF;
     }
 
+
+    .top {
+        margin-bottom: 10vh;
+        padding: 4vh 1vw;
+        border: 1px solid green;
+    }
+
     #account {
         float: left;
         color: rgba(255,255,255,0.51)
@@ -134,15 +141,11 @@
         font-size: 17px;
     }
 
-    .top {
-        margin-bottom: 10vh;
-        padding: 4vh 1vw;
-        border: 1px solid green;
-    }
+
 
     .content {         /*base du grid pour les infos*/
         display: grid;
-        grid-template-columns: 10% 18% 25% 29% 13%;
+        grid-template-columns: 8% 18% 25% 29% 15%;
         column-gap: 40px;
         border: 1px solid red;
     }
@@ -225,4 +228,65 @@
         display: none;
     }
 
+
+    @media screen and (max-width: 720px)
+    {
+
+        .modif {
+            display: none;
+        }
+
+        #account {
+            display: none;
+        }
+
+        .modif2 {
+            display: initial;
+            width: 100%;
+            padding: 20px 20px;
+        }
+
+        .top {
+            margin-bottom: 5vh;
+        }
+
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 0 4vw;
+        }
+
+        .info1 {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+
+
+
+        input {
+            width: 100%;
+            margin: 5px 0 35px 0;
+            padding: 7px 5px;
+            background-color: #242424;
+            border-style: none;
+            border-radius: 4px;
+        }
+
+        textarea {
+            width: 100%;
+            margin: 5px 0 35px 0;
+            padding: 7px 5px;
+            background-color: #242424;
+            border-style: none;
+            border-radius: 4px;
+        }
+
+        #btn-center {
+            padding: 0 4vw;
+            text-align: center;
+        }
+    }
 </style>

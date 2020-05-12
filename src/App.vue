@@ -1,5 +1,8 @@
 <template>
+    <div id="app">
     <Menu/>
+    <router-view/>
+    </div>
 </template>
 
 <script>
@@ -16,5 +19,9 @@ export default {
 <style>
   *{
     margin: 0;
+  }
+
+  #app{
+    display: flex;
   }
 </style>

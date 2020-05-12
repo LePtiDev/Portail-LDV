@@ -11,40 +11,54 @@
         <div class="direction">
             <div id="button">
                 <img src="./../assets/TableauxDeBordIcone.png">
+                <router-link to="#">
                 <a> Tableaux De Bord </a>
+                </router-link>
             </div>
             <hr id="top">
             <p class="categorie"> Catégories </p>
 
             <div id="buttons">
                 <img src="./../assets/empreinte.png">
+                <router-link to="#">
                 <a> Relevé de présence </a>
+                </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/calendrier.png">
+                <router-link to="/EmploieDuTemps">
                 <a> Emploie du temps </a>
+                </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/loupe.png">
+                <router-link to="#">
                 <a> Notes </a>
+                </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/horloge.png">
+                <router-link to="#">
                 <a>Absences</a>
+                </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
+                <router-link to="#">
                 <a> devinci online</a>
+                </router-link>
 
             </div>
 
             <div id="buttons">
                 <img src="./../assets/oeil.png">
+                <router-link to="#">
                 <a>Promotion école</a>
+                </router-link>
             </div>
             <hr id="medium">
             
@@ -52,12 +66,16 @@
 
             <div id="buttons">
                 <img src="./../assets/partage.png">
+                <router-link to="#">
                 <a>Occupation des salles</a>
+                </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/avion.png">
+                <router-link to="#">
                 <a>International</a>
+                </router-link>
             </div>
             <hr id="bottom">
 
@@ -65,7 +83,9 @@
 
             <div id="buttons">
                 <img src="./../assets/croix.png">
-                <a href="https://google.fr">Ressources</a>                
+                <router-link to="#">
+                <a href="https://google.fr">Ressources</a>  
+                </router-link>              
             </div>
 
         <div class="footer">
@@ -82,6 +102,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'Menu',
         props: {
@@ -105,7 +126,10 @@
 </script>
 
 <style scoped>
-
+*{
+    text-decoration: none;
+    color: #ffffff;
+}
 /* menu burger */
 .menu-btn {
   position: absolute;
@@ -167,7 +191,7 @@
 }
 /*/////////////////////////////////*/
 #menu {
-    width: 21%;
+    width: 21vw;
     height: 100vh;
     background-color: #252C48;
     font-family: 'Montserrat';
@@ -212,7 +236,7 @@
 }
 
 #button a{
-    padding: 0 10px;
+    padding: 0 5px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -229,8 +253,8 @@
 }
 
 #buttons a{
-    padding: 0 10px;
-    font-size: 15px;
+    padding: 0 5px;
+    font-size: 14px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -299,7 +323,7 @@
     font-size: 10px;
     }
     #buttons a{
-        font-size: 10px;
+        font-size: 9px;
     }
     #copyright{
         font-size: 9px;
@@ -319,7 +343,7 @@
     font-size: 8px;
     }
     #buttons a{
-        font-size: 8px;
+        font-size: 6.5px;
         line-height: 14px;
     }
     #copyright{
@@ -389,10 +413,10 @@
         text-align: center;
         position: absolute;
         bottom: 15px;
-        left: 22%;
+        left: 18%;
     }
     .etudiant {
-        left: 32%;
+        left: 30%;
     }
     .etudiant #nom {
         font-size: 15px;

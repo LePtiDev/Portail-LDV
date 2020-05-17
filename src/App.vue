@@ -11,21 +11,18 @@
 export default {
   name: 'App',
   components: {
-
   }
 }
 </script>
 
 <style>
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  *{
+    margin: 0;
+    padding: 0;
+  }
 
-#app {
-  font-family: Montserrat;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  #app{
+    display: flex;
+    background-color: black;
+  }
 </style>

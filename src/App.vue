@@ -23,5 +23,6 @@ export default {
 
   #app{
     display: flex;
+    background-color: black;
   }
 </style>

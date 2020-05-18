@@ -1,11 +1,13 @@
 <template>
     <div class="menu"></div>
-    <ProfileContent></ProfileContent>
+    <presence-content></presence-content>
 </template>
 
 <script>
+    import PresenceContent from "../components/PresenceContent";
     export default {
-        name: "Profile"
+        name: "Presence",
+        components: {PresenceContent}
     }
 </script>
 

@@ -191,12 +191,15 @@
 }
 /*/////////////////////////////////*/
 #menu {
-    width: 21vw;
+    width: 17vw;
     height: 100vh;
     background-color: #242424;
     font-family: 'Montserrat';
     color: #ffffff;
     transition-duration: 600ms;
+    position: fixed;
+    top: 0;
+    left:0;
 
 }
 

@@ -1,16 +1,18 @@
 <template>
   <div id="app">
+    <Menu class="fixed"></Menu>
     <router-view></router-view>
-    <!-- <router-link to="/Log">Log</router-link>
-    <router-link to="/Dashboard">Dash</router-link> -->
   </div>
 </template>
 
 <script>
 
+import Menu from "./components/Menu"
+
 export default {
   name: 'App',
   components: {
+    Menu
   }
 }
 </script>
@@ -19,10 +21,12 @@ export default {
   *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat';
+    color: white;
   }
 
   #app{
     display: flex;
-    background-color: black;
+    background-color: #121212;
   }
 </style>

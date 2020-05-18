@@ -270,18 +270,12 @@
             width: 100%;
             margin: 5px 0 35px 0;
             padding: 7px 5px;
-            background-color: #242424;
-            border-style: none;
-            border-radius: 4px;
         }
 
         textarea {
             width: 100%;
             margin: 5px 0 35px 0;
             padding: 7px 5px;
-            background-color: #242424;
-            border-style: none;
-            border-radius: 4px;
         }
 
         #btn-center {

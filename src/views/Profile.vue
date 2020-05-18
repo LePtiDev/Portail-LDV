@@ -1,7 +1,6 @@
 <template>
-    <div class="Profile">
-
-    </div>
+    <div class="menu"></div>
+    <ProfileContent></ProfileContent>
 </template>
 
 <script>
@@ -11,5 +10,7 @@
 </script>
 
 <style scoped>
-
+    .menu {
+        width: 20vw;
+    }
 </style>

@@ -233,8 +233,7 @@
     }
 
 
-    @media screen and (max-width: 720px)
-    {
+    @media screen and (max-width: 720px) {
 
         .modif {
             display: none;
@@ -255,7 +254,6 @@
         }
 
 
-
         .content {
             display: flex;
             flex-direction: column;
@@ -266,8 +264,6 @@
             width: 50%;
             margin: 0 auto;
         }
-
-
 
 
         input {
@@ -291,4 +287,5 @@
             text-align: center;
             margin-bottom: 40px;
         }
+    }
 </style>

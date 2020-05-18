@@ -83,8 +83,8 @@
 
             <div id="buttons">
                 <img src="./../assets/croix.png">
-                <router-link to="#">
-                <a href="https://google.fr">Ressources</a>  
+                <router-link to="/Ressources">
+                <a>Ressources</a>  
                 </router-link>              
             </div>
 

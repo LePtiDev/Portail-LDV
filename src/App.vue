@@ -23,6 +23,7 @@ export default {
     padding: 0;
     font-family: 'Montserrat';
     color: white;
+    box-sizing: border-box;
   }
 
   #app{

@@ -16,7 +16,7 @@
         </div>
         <div class="object">
             <h3>DE VINCI INNOVATION CENTER</h3>
-            <img src="./../assets/contract.png" alt="contract">
+            <img src="./../assets/3d-printer.png" alt="3d printer">
         </div>
         <div class="object">
             <h3>OFFICE 365</h3>
@@ -28,7 +28,7 @@
         </div>
         <div class="object">
             <h3>SERVICE INFORMATIQUE</h3>
-            <img src="./../assets/print.png" alt="print">
+            <img src="./../assets/contract.png" alt="contract">
         </div>
     </div>
   </div>

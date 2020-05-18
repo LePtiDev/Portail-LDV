@@ -11,7 +11,7 @@
         <div class="direction">
             <div id="button">
                 <img src="./../assets/TableauxDeBordIcone.png">
-                <router-link to="#">
+                <router-link to="/Dashboard">
                 <a> Tableaux De Bord </a>
                 </router-link>
             </div>
@@ -48,7 +48,7 @@
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <router-link to="#">
+                <router-link to="./CoursView">
                 <a> devinci online</a>
                 </router-link>
 
@@ -373,6 +373,7 @@
         position: absolute;
         left: -2000px;
         width: 100%;
+        z-index: 5;
     }
     .direction{
         text-align:center;

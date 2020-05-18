@@ -24,7 +24,7 @@
                     <label> ID DEVINCI </label><br/>
                     <input disabled type="text" value="AD180628"><br/>
 
-                    <label> NUMERO DE BADGE </label><br/>
+                    <label> NUMÉRO DE BADGE </label><br/>
                     <input disabled type="text" value="705655"><br/>
 
                     <label> ID. ADMINISTRATIF </label><br/>
@@ -36,7 +36,7 @@
                     <label> ADRESSE </label><br/>
                     <textarea disabled name="adress" rows="3"> 47 rue Jules Ferry 91380 Chilly-Mazarin FRANCE </textarea><br/>
 
-                    <label> TELEPHONE </label><br/>
+                    <label> TÉLÉPHONE </label><br/>
                     <textarea disabled name="phone" rows="2"> 01XXXXXXXX 06XXXXXXXX </textarea><br/>
                 </form>
             </div>

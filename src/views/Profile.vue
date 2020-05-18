@@ -10,6 +10,9 @@
 </script>
 
 <style scoped>
+    template {
+        display: flex;
+    }
     .menu {
         width: 20vw;
     }

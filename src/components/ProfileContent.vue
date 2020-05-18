@@ -12,7 +12,7 @@
 
             <div class="info1">
 
-                <img src="../assets/cobra1.jpg" class="pp" width="100%" height="auto">
+                <img src="../assets/antoine-drn.jpg" class="pp" width="100%" height="auto">
                 <h3> Antoine DROUIN <br/>
                     <span style="font-weight: normal; font-size: 17px; color: #FF8800"> A2DW1 </span></h3>
                 <button class="modif"> Faire une demande de modifications </button>
@@ -50,12 +50,16 @@
                     <input disabled type="text" value="06/01/1999 Longjumeau"><br/>
 
                     <label> CONTACT D'URGENCE </label><br/>
-                    <input disabled type="text" value="Monsieur Drouin 06XXXXXXXX Père"><br/>
+                    <input id="last-input" disabled type="text" value="Monsieur Drouin 06XXXXXXXX Père"><br/>
 
-                    <button class="modif2"> Faire une demande de modifications </button>
                 </form>
+
+
             </div>
+
         </section>
+
+        <div id="btn-center"><button class="modif2"> Faire une demande de modifications </button></div>
 
     </div>
 </template>
@@ -278,9 +282,13 @@
             padding: 7px 5px;
         }
 
+        #last-input {
+            margin: 5px 0 15px 0;
+        }
+
         #btn-center {
             padding: 0 4vw;
             text-align: center;
+            margin-bottom: 40px;
         }
-    }
 </style>

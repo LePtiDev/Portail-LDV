@@ -127,7 +127,7 @@
     .top {
         margin-bottom: 10vh;
         padding: 4vh 1vw;
-        border: 1px solid green;
+        /*border: 1px solid green;*/
     }
 
     #account {
@@ -147,13 +147,13 @@
         display: grid;
         grid-template-columns: 8% 18% 25% 29% 15%;
         column-gap: 40px;
-        border: 1px solid red;
+        /*border: 1px solid red;*/
     }
 
     .info1 {
         grid-column: 2/3;
         text-align: center;
-        border: 1px solid white;
+        /*border: 1px solid white;*/
     }
 
     .pp {
@@ -178,13 +178,13 @@
 
     .info2 {
         grid-column: 3/4;
-        border: 1px solid white;
+        /*border: 1px solid white;*/
     }
 
 
     .info3 {
         grid-column: 4/5;
-        border: 1px solid white;
+        /*border: 1px solid white;*/
     }
 
     input {

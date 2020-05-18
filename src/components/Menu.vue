@@ -11,7 +11,7 @@
         <div class="direction">
             <div id="button">
                 <img src="./../assets/TableauxDeBordIcone.png">
-                <router-link to="#">
+                <router-link to="/Dashboard">
                 <a> Tableaux De Bord </a>
                 </router-link>
             </div>
@@ -191,7 +191,7 @@
 }
 /*/////////////////////////////////*/
 #menu {
-    width: 21vw;
+    width: 17vw;
     height: 100vh;
     background-color: #242424;
     font-family: 'Montserrat';

@@ -370,6 +370,7 @@
         position: absolute;
         left: -2000px;
         width: 100%;
+        z-index: 5;
     }
     .direction{
         text-align:center;

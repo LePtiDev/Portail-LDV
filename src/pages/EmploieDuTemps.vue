@@ -29,9 +29,10 @@
             </div>
             </section>
             <section id="contentPlanning">
+                
+                <div class="planning">
                 <div class="heures">
-                <p>_ _ H _ _</p>
-                <div>
+                
                     <p>8H00</p>                
                     <p>9H00</p>              
                     <p>10H00</p>               
@@ -45,9 +46,8 @@
                     <p>18H00</p>                
                     <p>19H00</p>
                 </div>
-                </div>
-                <div class="planning">
                     <div id="contentDay">
+                    
                         <p id="day">Lundi | 6</p>
                         <div id="lundi">
                         </div>
@@ -160,7 +160,7 @@ export default {
 }
 /* debut header */
 .head{
-    padding: 20px 0;
+    padding: 20px 0 10px;
   }
 #edt{
     font-size: 17px;
@@ -199,11 +199,13 @@ export default {
 /* haut du contenu de ledt */
 .content{
     background-color:#272727;
+    height: 80%;
 }
 #title{
     text-align: center;
     display: flex;
     padding-top: 15px;
+    padding-bottom: 5px;
 }
 #headTitle{
     width: 100%;
@@ -229,14 +231,16 @@ export default {
 .planning{
     display: flex;
     padding: 15px 5px 0;
+    align-items: flex-end;
 }
 .heures{
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    display:flex;
+    flex-direction: column;
+    height: 60vh;
 }
 .heures p{
-    padding: 1.5vh 0;
     font-size: 13px;
 }
 #contentDay{
@@ -246,42 +250,36 @@ export default {
 #lundi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
 #mardi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
 #mercredi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
 #jeudi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
 #vendredi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
 #samedi{
     height: 60vh;
     width: 10vw;
-    margin-top: 20px;
     border: solid 1px #ffffff;
     position: relative;
 }
@@ -289,6 +287,15 @@ export default {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    padding-bottom: 10px;
+}
+
+#H{
+    width: 100%;
+    padding: 0;
+    height: 0px;
+    position: relative;
+    bottom: 20px;
 }
 
 

@@ -96,7 +96,6 @@ export default {
         height(start, end){
             this.nb = ((end - start) * 60) / 15
             this.hauteur = this.nb * 2.27272727
-            console.log("tamere")
             return this.hauteur
         },
 
@@ -105,28 +104,28 @@ export default {
         }
     },
 
-    mounted: {
-        function () {
+    mounted () {
+         
             for (let index = 0; index < this.tab.length; index++) {
-                console.log("fils de pute")
                 this.jours = this.tab[index].jours
                 this.start = this.tab[index].start
                 this.end = this.tab[index].end
+                this.type = this.tab[index].type
 
-                this.document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="cours" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%"></div>');
+                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%"></div>');
             }
-        }
+        
     },
 
     data(){
         return{
             tab: [
-    {"start": 8, "end": 13, "jours": "lundi"},
-    {"start": 14, "end": 19, "jours": "lundi"},
-    {"start": 8, "end": 13, "jours": "mardi"},
-    {"start": 14, "end": 19, "jours": "mardi"},
-    {"start": 8, "end": 13, "jours": "mercredi"},
-    {"start": 14, "end": 19, "jours": "jeudi"},
+    {"start": 8, "end": 13, "jours": "lundi", "type": "cours"},
+    {"start": 14, "end": 19, "jours": "lundi", "type": "event"},
+    {"start": 8, "end": 13, "jours": "mardi", "type": "cours"},
+    {"start": 14, "end": 19, "jours": "mardi", "type": "event"},
+    {"start": 8, "end": 13, "jours": "mercredi", "type": "event"},
+    {"start": 14, "end": 19, "jours": "jeudi", "type": "cours"},
 ],
         }
     },
@@ -138,6 +137,18 @@ export default {
 *{
     margin: 0;
   }
+  .cours{
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+}
+.event{
+    width: 100%;
+    background-color: #FF8800;
+    position: absolute;
+    left: 0;
+}
 </style>
 
 <style scoped>
@@ -220,12 +231,12 @@ export default {
     padding: 15px 5px 0;
 }
 .heures{
-    padding: 0 15px;
     text-align: center;
-    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .heures p{
-    padding: 10px 0;
+    padding: 1.5vh 0;
     font-size: 13px;
 }
 #contentDay{
@@ -279,11 +290,6 @@ export default {
     text-transform: uppercase;
     font-weight: 600;
 }
-.cours{
-    width: 100%;
-    background-color: yellow;
-    position: absolute;
-    left: 0;
-}
+
 
 </style>

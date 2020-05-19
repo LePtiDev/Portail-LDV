@@ -44,7 +44,9 @@
                 <div class="space"></div>
                 <div class="section mark">
                     <p class="section-title marg-schedule">NOTES RÉCENTES</p>
-
+                    <div v-for="item in this.marks" :key="item.id">
+                        <DivMarks :course="item.course" :mark="item.mark" :comment="item.comment"></DivMarks>
+                    </div>
                     <a class="see-more" href="#">Voir toutes mes notes</a>
                 </div>
             </div>
@@ -59,14 +61,16 @@
 
 import CheckButton from '../components/CheckButton' 
 import DivSchedule from '../components/dashboard_components/DivSchedule'
-import DivAbsence from '../components/dashboard_components/DivSchedule'
+import DivAbsence from '../components/dashboard_components/DivAbsence'
+import DivMarks from '../components/dashboard_components/DivMarks'
 
 export default {
   name: "Dashboard",
   components: {
       CheckButton,
       DivSchedule,
-      DivAbsence
+      DivAbsence,
+      DivMarks
   },
   props: {
     msg: String
@@ -83,6 +87,12 @@ export default {
               {id: 1, date: "10-03-2020", course: "General English", status: false, reason: "Absent"},
               {id: 2, date: "31-01-2020", course: "UX / Strat / Business", status: true, reason: "Excusee par scolarité"},
               {id: 3, date: "06-01-2020", course: "Sport", status: true, reason: "Dispense de sport"},
+          ],
+
+          marks : [
+              {id: 1, course: "DEVLAB S1 - Alexis BOUGY", mark: 15, comment: "Bon document de rendu, beaucoup d’explications fournies ! Le prototype sous xd est très bien. Bon avancement technique, je note cependant un deséquilibre dans la répartition des charges de travail, cela sera votre axe d’amélioration au S2"},
+              {id: 2, course: "STRAT MARKETING - Julien LEBRETON", mark: 0, comment: "Absent"},
+              {id: 3, course: "MISE EN LIGNE FTP - Pierre GRIMAUD", mark: 19, comment: "Très bon rapport !"},
           ]
       }
   }
@@ -156,7 +166,7 @@ h2 {
 }
 
 .row-two{
-    height: 500px;
+    height: 600px;
 }
 
 .row-three{

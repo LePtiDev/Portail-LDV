@@ -25,8 +25,9 @@ export default {
     width: 100%;
     background-color: #0F0F0F;
     border-radius: 4px;
-    padding: 20px;
+    padding: 15px;
     margin: 20px 0px 0px 0px;
+    font-size: 15px;
 }
 
 .contenu{

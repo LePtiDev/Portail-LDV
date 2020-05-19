@@ -1,27 +1,27 @@
 <template>
-    <div class="container-absence" v-bind:class="[status ? 'div-good' : 'div-bad']">
-        <p class="contenu date">{{date}}</p>
+    <div class="container-marks" v-bind:class="[mark > 10 ? 'div-good' : 'div-bad']">
         <p class="contenu course">{{course}}</p>
-        <p class="contenu reason" v-bind:class="[status ? 'good' : 'bad']">{{reason}}</p>
+        <p class="contenu mark" v-bind:class="[mark > 10 ? 'good' : 'bad']">{{mark}} / 20</p>
+        <p class="contenu date">{{comment}}</p>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'DivAbsence',
+    name: 'DivMarks',
     props: {
         date: String,
-        reason: String,
         course: String,
-        status: Boolean
+        mark: Number,
+        comment: Boolean
     },
 }
 </script>
 
 <style scoped>
 
-.container-absence{
-    height: auto;
+.container-marks{
+    max-height: 300px;
     width: 100%;
     background-color: #0F0F0F;
     border-radius: 4px;
@@ -29,18 +29,14 @@ export default {
     margin: 20px 0px 0px 0px;
 }
 
-.contenu-absence{
-    width: 98%;
-    height: 100%;
-}
-
 .contenu{
     margin: 0px 0px 2px 0px;
     font-size: 15px
 }
 
-.reason{
+.mark{
     font-weight: 600;
+    font-size: 20px;
 }
 
 .good{

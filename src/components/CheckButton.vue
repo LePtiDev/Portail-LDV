@@ -3,7 +3,7 @@
         <p>JE SUIS PRÉSENT</p>
         <div class=timer>
             <img src="../assets/horloge.png" alt="">
-            <p class="time">4:39</p>
+            <p class="time">{{this.minutes}} : {{this.seconds}}0</p>
         </div>
     </div>
 </template>
@@ -14,16 +14,21 @@ export default {
     props: {
         student: String,
     },
-    methods: {
 
-    }
+    data() {
+        return {
+            show: "15:00",
+            minutes: 15,
+            seconds: 0,
+        }
+    },
 }
 </script>
 
 <style scoped>
 
 .bouton{
-    height: 94px;
+    height: 90px;
     width: 100%;
     background-color: #27AE60;
     border-radius: 4px;
@@ -32,6 +37,7 @@ export default {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    cursor: pointer;
 }
 
 .timer{

@@ -4,19 +4,49 @@
         <div class="grid">
             <div class="rows row-one">
                 <div class="section presence">
-                    <p class="section-title">RELEVÉ DE PRÉSENCE</p>
-                    <p class="section-underTitle">Devlab S2 - 10/03</p>
+                    <div>
+                        <p class="section-title">RELEVÉ DE PRÉSENCE</p>
+                        <p class="section-underTitle">Devlab S2 - 10/03</p>
+                    </div>
                     <CheckButton/>
                 </div>
                 <div class="space"></div>
-                <div class="section information"></div>
+                <div class="section information">
+                    <p class="section-title">🦠 INFORMATION IMPORTANTE COVID-19</p>
+                    <p>
+                        Afin d’anticiper au mieux les besoins de la communauté du Pôle Léonard de Vinci, 
+                        une cellule de prévention et de suivi a été créée au niveau de la direction générale, 
+                        elle se réunit de façon très régulière. Les équipes de la direction générale sont en 
+                        étroite relation avec celles du Ministère de l’Enseignement Supérieur, de la Recherche 
+                        et de l’Innovation et de la Préfecture, afin d’accompagner les étudiants, professeurs 
+                        et collaborateurs dans ce contexte et leur proposer une solution adaptée à leur situation.
+                        Pour toutes questions concernant le coronavirus, nous vous prions d’envoyer un mail 
+                        à l’adresse : coronavirus@devinci.fr
+                    </p>
+                </div>
             </div>
             <div class="rows row-two">
-                <div class="section edt"></div>
+                <div class="section edt">
+                    <p class="section-title marg-schedule">EMPLOI DU TEMPS DU JOUR</p>
+                    <div v-for="item in this.course" :key="item">
+                        <DivSchedule :room="item.room" :course="item.course" :date="item.date"></DivSchedule>
+                    </div>
+                    <a class="see-more" href="#">Voir mon emploi du temps</a>
+                </div>
                 <div class="space"></div>
-                <div class="section absence"></div>
+                <div class="section absence">
+                    <p class="section-title marg-schedule">ABSENCES RÉCENTES</p>
+                    <div v-for="item in this.absence" :key="item">
+                        <DivAbsence :room="item.room" :course="item.course" :date="item.date"></DivAbsence>
+                    </div>
+                    <a class="see-more" href="#">Voir toutes mes absences</a>
+                </div>
                 <div class="space"></div>
-                <div class="section mark"></div>
+                <div class="section mark">
+                    <p class="section-title marg-schedule">NOTES RÉCENTES</p>
+
+                    <a class="see-more" href="#">Voir toutes mes notes</a>
+                </div>
             </div>
             <div class="rows row-three">
                 <div class="section contact"></div>
@@ -27,15 +57,34 @@
 
 <script>
 
-import CheckButton from '../components/CheckButton'
+import CheckButton from '../components/CheckButton' 
+import DivSchedule from '../components/dashboard_components/DivSchedule'
+import DivAbsence from '../components/dashboard_components/DivSchedule'
 
 export default {
   name: "Dashboard",
   components: {
       CheckButton,
+      DivSchedule,
+      DivAbsence
   },
   props: {
     msg: String
+  },
+
+  data(){
+      return {
+          course : [
+              {date: "10:45 - 13:15", course: "General English [LV]", room: "[E 253] Marianna PAVLOVA"},
+              {date: "15:00 - 17:00", course: "[E 252] Alexis BOUGY", room: "Devlab S2 [HP]"}
+          ],
+
+          absence : [
+              {date: "10-03-2020", course: "General English", status: false, reason: "Absent"},
+              {date: "31-01-2020", course: "UX / Strat / Business", status: true, reason: "Excusee par scolarité"},
+              {date: "06-01-2020", course: "Sport", status: true, reason: "Dispense de sport"},
+          ]
+      }
   }
 };
 </script>
@@ -71,6 +120,14 @@ h2 {
 
 .section-underTitle{
   font-size: 18px;
+}
+
+.see-more{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 12px;
+    text-decoration: none;
 }
 
 /* Grille */
@@ -112,6 +169,7 @@ h2 {
     background-color: #242424;
     height: 100%;
     border-radius: 4px;
+    position: relative;
 }
 
 .space{
@@ -121,10 +179,18 @@ h2 {
 
 .presence{
     width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .information{
     width: 68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .edt{
@@ -150,5 +216,13 @@ h2 {
   width: 100%;
   background-color: #27AE60;
 }
+
+/* section emploi du temps */
+
+.marg-schedule{
+    margin-bottom: 40px;
+}
+
+
 
 </style>

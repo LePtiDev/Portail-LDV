@@ -105,15 +105,17 @@ export default {
         }
     },
 
-    mounted () {
+    mounted() {
          
             for (let index = 0; index < this.tab.length; index++) {
                 this.jours = this.tab[index].jours
                 this.start = this.tab[index].start
                 this.end = this.tab[index].end
                 this.type = this.tab[index].type
+                this.salle = this.tab[index].salle
+                this.name = this.tab[index].name
 
-                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p></div>');
+                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%; display: flex; flex-wrap: wrap;"><div style="display: flex; flex-wrap: wrap; height: 15%; padding: 2px;"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p><p id="salle">['+this.salle+']</p> <p id="name">'+this.name+'</p></div>');
             }
         
     },
@@ -121,12 +123,12 @@ export default {
     data(){
         return{
             tab: [
-    {"start": 8, "end": 13, "jours": "lundi", "type": "cours"},
-    {"start": 14, "end": 19, "jours": "lundi", "type": "event"},
-    {"start": 8, "end": 13, "jours": "mardi", "type": "cours"},
-    {"start": 14, "end": 19, "jours": "mardi", "type": "event"},
-    {"start": 8, "end": 13, "jours": "mercredi", "type": "event"},
-    {"start": 14, "end": 19, "jours": "jeudi", "type": "cours"},
+    {"start": 8, "end": 13, "jours": "lundi", "type": "cours", "salle": "E359", "name": "Symfony|PHP"},
+    {"start": 14, "end": 19, "jours": "lundi", "type": "event", "salle": "L404", "name": "Sport"},
+    {"start": 8, "end": 13, "jours": "mardi", "type": "cours", "salle": "E106", "name": "Devlab"},
+    {"start": 14, "end": 19, "jours": "mardi", "type": "event", "salle": "AMPHI H", "name": "Réunion iimpact"},
+    {"start": 8, "end": 13, "jours": "mercredi", "type": "event", "salle": "E259", "name": "Symfony|PHP"},
+    {"start": 14, "end": 19, "jours": "jeudi", "type": "cours", "salle": "E359", "name": "Date avec quentin"},
 ],
         }
     },
@@ -138,7 +140,7 @@ export default {
 *{
     margin: 0;
   }
-.cours{
+  .cours{
     width: 100%;
     background-color: black;
     position: absolute;
@@ -154,7 +156,26 @@ export default {
 }
 #heure-cours{
     font-size: 10px;
-    padding: 3px 3px;
+    padding: 3px 25px 0px 3px;
+}
+
+#salle{
+    font-size: 10px;
+    padding: 3px 0 0 3px;
+    position: absolute;
+    right: 5px;
+}
+#name{
+    width: 100%;
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0px 0px 3px;
+}
+@media screen and (min-width: 0px) and (max-width: 1300px){
+    #salle{
+        position: initial;
+    }
 }
 </style>
 

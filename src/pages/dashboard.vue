@@ -28,7 +28,7 @@
             <div class="rows row-two">
                 <div class="section edt">
                     <p class="section-title marg-schedule">EMPLOI DU TEMPS DU JOUR</p>
-                    <div v-for="item in this.course" :key="item">
+                    <div v-for="item in this.course" :key="item.id">
                         <DivSchedule :room="item.room" :course="item.course" :date="item.date"></DivSchedule>
                     </div>
                     <a class="see-more" href="#">Voir mon emploi du temps</a>
@@ -36,8 +36,8 @@
                 <div class="space"></div>
                 <div class="section absence">
                     <p class="section-title marg-schedule">ABSENCES RÉCENTES</p>
-                    <div v-for="item in this.absence" :key="item">
-                        <DivAbsence :room="item.room" :course="item.course" :date="item.date"></DivAbsence>
+                    <div v-for="item in this.absence" :key="item.id">
+                        <DivAbsence :reason="item.reason" :course="item.course" :date="item.date" :status="item.status"></DivAbsence>
                     </div>
                     <a class="see-more" href="#">Voir toutes mes absences</a>
                 </div>
@@ -75,14 +75,14 @@ export default {
   data(){
       return {
           course : [
-              {date: "10:45 - 13:15", course: "General English [LV]", room: "[E 253] Marianna PAVLOVA"},
-              {date: "15:00 - 17:00", course: "[E 252] Alexis BOUGY", room: "Devlab S2 [HP]"}
+              {id: 1, date: "10:45 - 13:15", course: "General English [LV]", room: "[E 253] Marianna PAVLOVA"},
+              {id: 2, date: "15:00 - 17:00", course: "[E 252] Alexis BOUGY", room: "Devlab S2 [HP]"}
           ],
 
           absence : [
-              {date: "10-03-2020", course: "General English", status: false, reason: "Absent"},
-              {date: "31-01-2020", course: "UX / Strat / Business", status: true, reason: "Excusee par scolarité"},
-              {date: "06-01-2020", course: "Sport", status: true, reason: "Dispense de sport"},
+              {id: 1, date: "10-03-2020", course: "General English", status: false, reason: "Absent"},
+              {id: 2, date: "31-01-2020", course: "UX / Strat / Business", status: true, reason: "Excusee par scolarité"},
+              {id: 3, date: "06-01-2020", course: "Sport", status: true, reason: "Dispense de sport"},
           ]
       }
   }

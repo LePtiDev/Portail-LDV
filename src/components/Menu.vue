@@ -11,7 +11,7 @@
         <div class="direction">
             <div id="button">
                 <img src="./../assets/TableauxDeBordIcone.png">
-                <router-link to="/">
+                <router-link to="/Dashboard">
                 <a> Tableaux De Bord </a>
                 </router-link>
             </div>
@@ -48,7 +48,7 @@
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <router-link to="#">
+                <router-link to="./CoursView">
                 <a> devinci online</a>
                 </router-link>
 
@@ -56,7 +56,7 @@
 
             <div id="buttons">
                 <img src="./../assets/oeil.png">
-                <router-link to="#">
+                <router-link to="/AddEvent">
                 <a>Promotion école</a>
                 </router-link>
             </div>
@@ -83,8 +83,8 @@
 
             <div id="buttons">
                 <img src="./../assets/croix.png">
-                <router-link to="#">
-                <a href="https://google.fr">Ressources</a>  
+                <router-link to="/Ressources">
+                <a>Ressources</a>  
                 </router-link>              
             </div>
 
@@ -373,6 +373,7 @@
         position: absolute;
         left: -2000px;
         width: 100%;
+        z-index: 5;
     }
     .direction{
         text-align:center;

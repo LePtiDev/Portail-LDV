@@ -41,14 +41,14 @@
 
             <div id="buttons">
                 <img src="./../assets/horloge.png">
-                <router-link to="#">
+                <router-link to="/Absence">
                 <a>Absences</a>
                 </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <router-link to="./CoursView">
+                <router-link to="/CoursView">
                 <a> devinci online</a>
                 </router-link>
 

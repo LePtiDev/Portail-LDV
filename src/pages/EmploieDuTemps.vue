@@ -114,7 +114,6 @@ export default {
                 this.type = this.tab[index].type
                 this.salle = this.tab[index].salle
                 this.name = this.tab[index].name
-                console.log(this.index)
 
                 document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%; display: flex; flex-wrap: wrap; z-index:'+index+' "><div style="display: flex; flex-wrap: wrap; height: 15%; padding: 2px;"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p><p id="salle">['+this.salle+']</p> <p id="name">'+this.name+'</p></div>');
             }

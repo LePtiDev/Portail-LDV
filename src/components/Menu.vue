@@ -45,7 +45,7 @@
 
             <div id="buttons">
                 <img src="./../assets/horloge.png">
-                <router-link to="#">
+                <router-link to="/Absence">
                 <a>Absences</a>
                 </router-link>
             </div>

@@ -16,7 +16,7 @@
             <section id="title">
                 <p id="headTitle">MAI 2020</p>
                 <div id="allBtn">
-                <div if="leftBtn">
+                <div id="leftBtn">
                     <svg id="left" xmlns="http://www.w3.org/2000/svg" width="7.434" height="12.056" viewBox="0 0 7.434 12.056">
                     <path id="Icon_Keyboard_Arrow_-_Up_Dark" data-name="Icon / Keyboard Arrow - Up / Dark" d="M10.649,7.434,6.028,2.813,1.406,7.434,0,6.028,6.028,0l6.028,6.028Z" transform="translate(0 12.056) rotate(-90)" fill="#fff"/>
                     </svg>
@@ -45,7 +45,7 @@
                     <p>17H00</p>                
                     <p>18H00</p>                
                     <p>19H00</p>
-                </div>
+                    </div>
                     <div id="contentDay">
                     
                         <p id="day">Lundi | 6</p>
@@ -124,13 +124,14 @@ export default {
     data(){
         return{
             tab: [
-    {"start": 8, "end": 13, "jours": "lundi", "type": "cours", "salle": "E359", "name": "Symfony|PHP"},
-    {"start": 10, "end": 12, "jours": "lundi", "type": "cours", "salle": "E359", "name": "Symfony|PHP"},
+    {"start": 8, "end": 10, "jours": "lundi", "type": "cours", "salle": "E359", "name": "Symfony|PHP"},
+    {"start": 12, "end": 13, "jours": "lundi", "type": "event", "salle": "E359", "name": "Réunion délégué"},
     {"start": 14, "end": 19, "jours": "lundi", "type": "event", "salle": "L404", "name": "Sport"},
     {"start": 8, "end": 13, "jours": "mardi", "type": "cours", "salle": "E106", "name": "Devlab"},
     {"start": 14, "end": 19, "jours": "mardi", "type": "event", "salle": "AMPHI H", "name": "Réunion iimpact"},
-    {"start": 8, "end": 13, "jours": "mercredi", "type": "event", "salle": "E259", "name": "Symfony|PHP"},
+    {"start": 8, "end": 13, "jours": "mercredi", "type": "cours", "salle": "E259", "name": "Symfony|PHP"},
     {"start": 14, "end": 19, "jours": "jeudi", "type": "cours", "salle": "E359", "name": "Date avec quentin"},
+    {"start": 9, "end": 17, "jours": "samedi", "type": "event", "salle": "PULV", "name": "Journée Porte Ouverte"},
 ],
         }
     },
@@ -158,7 +159,7 @@ export default {
 }
 #heure-cours{
     font-size: 10px;
-    padding: 3px 25px 0px 3px;
+    padding: 3px 0px 0px 3px;
 }
 
 #salle{
@@ -169,10 +170,9 @@ export default {
 }
 #name{
     width: 100%;
-    padding-top: 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
-    padding: 10px 0px 0px 3px;
+    padding-left: 3px;
 }
 @media screen and (min-width: 0px) and (max-width: 1300px){
     #salle{

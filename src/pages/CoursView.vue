@@ -46,13 +46,16 @@
       </div>
       <div class="row4">
         <h3>RENDU DE LA SEMAINE</h3>
-        <div class="row3-content">
-          <input type="text" class="bg-dark" placeholder="Présensation.docx" />
-          <button class="bg-dark">
-            <img src="./../assets/file.png" alt="file" />
-            <h4>Téléverser</h4>
-          </button>
-        </div>
+        <form action="">
+          <div class="row4-content">
+            <input type="text" class="bg-dark" placeholder="Présensation.docx" />
+            <button class="bg-dark">
+              <img src="./../assets/file.png" alt="file" />
+              <h4>Téléverser</h4>
+            </button>
+          </div>
+          <input id="submit" type="submit" value="Sauvegarder">
+        </form>
       </div>
     </div>
   </div>
@@ -139,7 +142,7 @@ span {
   margin-top: 33px;
 }
 
-.row3-content{
+.row3-content, .row4-content{
   display: flex;
 }
 
@@ -149,6 +152,7 @@ span {
   display: flex;
   align-items: center;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .row4 button {
@@ -157,20 +161,23 @@ span {
   display: flex;
   align-items: center;
   font-size: 16px;
+  cursor: pointer;
 }
 
 
 
 .row3 input.bg-dark{
   margin-left: 2vw;
-  padding: 30px 45vw 30px 40px;
+  width: 83%;
+  padding: 30px;
   outline: none;
   border: none;
 }
 
 .row4 input.bg-dark{
   margin-right: 2vw;
-  padding: 30px 43vw 30px 40px;
+  width: 80%;
+  padding: 30px;
   outline: none;
   border: none;
 }
@@ -181,4 +188,26 @@ span {
 .row4 button h4 {
   margin: 0 5px;
 }
+
+.row4 h3 {
+  margin-top: 10vh;
+}
+
+form {
+  text-align: center;
+}
+
+form input[type="submit"]{
+  margin-top: 5vh;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #27AE60;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 </style>

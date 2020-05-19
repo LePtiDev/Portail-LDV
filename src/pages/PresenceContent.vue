@@ -50,8 +50,8 @@
 </template>
 
 <script>
-    import PresentButtonPc from "./PresentButtonPc";
-    import PresentButtonMobile from "./PresentButtonMobile";
+    import PresentButtonPc from "../components/PresentButtonPc";
+    import PresentButtonMobile from "../components/PresentButtonMobile";
     export default {
         name: "PresenceContent",
         components: {PresentButtonMobile, PresentButtonPc}

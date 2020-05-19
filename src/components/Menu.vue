@@ -144,7 +144,7 @@
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  z-index: 10;
+  z-index: 99999;
   /* border: 3px solid #fff; */
 }
 .head-burger{
@@ -377,7 +377,7 @@
         position: absolute;
         left: -2000px;
         width: 100%;
-        z-index: 5;
+        z-index: 99999;
     }
     .direction{
         text-align:left;

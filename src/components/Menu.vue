@@ -34,7 +34,7 @@
 
             <div id="buttons">
                 <img src="./../assets/loupe.png">
-                <router-link to="#">
+                <router-link to="/Marks">
                 <a> Notes </a>
                 </router-link>
             </div>

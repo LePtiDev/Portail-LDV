@@ -50,6 +50,7 @@
                     
                         <p id="day">Lundi | 6</p>
                         <div id="lundi">
+
                         </div>
                     </div>
                     <div id="contentDay">
@@ -112,7 +113,7 @@ export default {
                 this.end = this.tab[index].end
                 this.type = this.tab[index].type
 
-                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%"></div>');
+                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p></div>');
             }
         
     },
@@ -137,17 +138,23 @@ export default {
 *{
     margin: 0;
   }
-  .cours{
+.cours{
     width: 100%;
     background-color: black;
     position: absolute;
     left: 0;
+    text-align: left;
 }
 .event{
     width: 100%;
     background-color: #FF8800;
     position: absolute;
     left: 0;
+    text-align: left;
+}
+#heure-cours{
+    font-size: 10px;
+    padding: 3px 3px;
 }
 </style>
 
@@ -239,6 +246,8 @@ export default {
     display:flex;
     flex-direction: column;
     height: 60vh;
+    padding-bottom: 2px;
+    padding: 0 5px;
 }
 .heures p{
     font-size: 13px;
@@ -297,6 +306,7 @@ export default {
     position: relative;
     bottom: 20px;
 }
+
 
 
 </style>

@@ -11,7 +11,7 @@
         <div class="direction">
             <div id="button">
                 <img src="./../assets/TableauxDeBordIcone.png">
-                <router-link to="#">
+                <router-link to="/">
                 <a> Tableaux De Bord </a>
                 </router-link>
             </div>

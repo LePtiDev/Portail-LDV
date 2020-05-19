@@ -13,7 +13,7 @@ export default {
         date: String,
         course: String,
         mark: Number,
-        comment: Boolean
+        comment: String,
     },
 }
 </script>

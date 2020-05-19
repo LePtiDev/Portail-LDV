@@ -51,7 +51,14 @@
                 </div>
             </div>
             <div class="rows row-three">
-                <div class="section contact"></div>
+                <div class="section contact">
+                    <p class="section-title title-contact">VOS CONTACTS IMPORTANTS</p>
+                    <div class="contact-for">
+                        <div v-for="item in this.contacts" :key="item.id">
+                            <DivContact :name="item.name" :post="item.post" :axe="item.axe" :email="item.email" :number="item.number" :picture="item.picture"></DivContact>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -63,6 +70,7 @@ import CheckButton from '../components/CheckButton'
 import DivSchedule from '../components/dashboard_components/DivSchedule'
 import DivAbsence from '../components/dashboard_components/DivAbsence'
 import DivMarks from '../components/dashboard_components/DivMarks'
+import DivContact from '../components/dashboard_components/DivContact'
 
 export default {
   name: "Dashboard",
@@ -70,7 +78,8 @@ export default {
       CheckButton,
       DivSchedule,
       DivAbsence,
-      DivMarks
+      DivMarks,
+      DivContact
   },
   props: {
     msg: String
@@ -93,6 +102,12 @@ export default {
               {id: 1, course: "DEVLAB S1 - Alexis BOUGY", mark: 15, comment: "Bon document de rendu, beaucoup d’explications fournies ! Le prototype sous xd est très bien. Bon avancement technique, je note cependant un deséquilibre dans la répartition des charges de travail, cela sera votre axe d’amélioration au S2"},
               {id: 2, course: "STRAT MARKETING - Julien LEBRETON", mark: 0, comment: "Absent"},
               {id: 3, course: "MISE EN LIGNE FTP - Pierre GRIMAUD", mark: 19, comment: "Très bon rapport !"},
+          ],
+
+          contacts : [
+              {id: 1, name: "Karine MOUSDIK", post: "Coordinatrice Pédagogique", axe: "Axe développement web", email: "karine.mousdik@devinci.fr", number: "+33 1 41 16 75 55", picture: "karine.png"},
+              {id: 2, name: "Virak MEY", post: "Responsable du département", axe: "Axe développement web", email: "virak.mey@devinci.fr", number: "+33 1 41 16 72 38", picture: "virak.png"},
+              {id: 3, name: "Alexis BOUGY", post: "Professeur Délégué", axe: "Axe développement web", email: "alexis.bougy@devinci.fr", number: "+33 1 41 16 75 26", picture: "alexis.png"},
           ]
       }
   }
@@ -170,7 +185,7 @@ h2 {
 }
 
 .row-three{
-    height: 212px;
+    height: 250px;
 }
 
 /* sections */
@@ -233,6 +248,17 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* section contact */
 
+.title-contact{
+    margin-bottom: 30px;
+}
+
+.contact-for{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 </style>

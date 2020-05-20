@@ -7,12 +7,15 @@
                     <p class="section-title">PROGRAMMES</p>
                     <div class="allProgrammes">
                         <div v-for="program in this.program" :key="program.id">
-                            <DivProgram :date="program.date" :name="program.name"></DivProgram>
+                            <DivProgram :date="program.date" :name="program.name" :average="CalcAverage"></DivProgram>
                         </div>
                     </div>
                 </div>
                 <div class="space"></div>
-                <div class="section section-graph"></div>
+                <div class="section section-graph">
+                    <p class="section-title">GRAPHIQUE</p>
+                    <DivGraph :marks="this.marks"></DivGraph>
+                </div>
             </div>
             <div class="row-two">
                 <p><span class="bold">NOTES :</span> Année 2 - Axe Développement Web (A2DW1)</p>
@@ -30,7 +33,7 @@
                     </div>
                     <div class="check-modules">
                         <div class="average">
-                            <p class="number-average">{{this.average}}</p>
+                            <p class="number-average">{{CalcAverage}}</p>
                         </div>
                         <!-- condition pour tester si le module est validé-->
                         <div v-if="average >= 10">
@@ -53,12 +56,14 @@
 
 import DivProgram from '../components/marks_components/DivProgram'
 import DivAllMark from '../components/marks_components/DivAllMark'
+import DivGraph from '../components/marks_components/DivGraph'
 
 export default {
     name: "Marks",
     components: {
         DivProgram,
-        DivAllMark
+        DivAllMark,
+        DivGraph
     },
     props: {
 
@@ -72,24 +77,29 @@ export default {
             ],
 
             marks : [
-              {id: 1, mark: 14.00, score: "13.67 / 20", course: "Versionning/ IDE / Config interne", professor: "Pierre Grimaud", comment:"Très bon travail sur la configuration"},
+              {id: 1, mark: 0.00, score: "13.67 / 20", course: "Versionning/ IDE / Config interne", professor: "Pierre Grimaud", comment:"Très bon travail sur la configuration"},
               {id: 2, mark: 8.00, score: "14.10 / 20", course: "Base de donnée / Modélisation", professor: "Céline OULMI", comment:"Dommage, peu mieux faire, erreur MySQL"},
               {id: 3, mark: 15.50, score: "13.14 / 20", course: "PHP", professor: "Alexis BOUGY", comment:"Des facilités mais a su rester impliqué et interessé, bonne participation"},
               {id: 4, mark: 0.00, score: "13.67 / 20", course: "Mise en ligne / FTP", professor: "Pierre Grimaud :", comment:"Travail non rendu…"},
               {id: 5, mark: 18.00, score: "15.23 / 20", course: "Déploiement", professor: "Prof EPITECH", comment:"Très bon rapport"},
             ],
-            average: 10,
+            average: 0,
         } 
     },
+    computed: {
+        CalcAverage(){
+            var total = 0;
+            var left = 0;
 
-    mounted(){
-        var total = 0;
-        for(var i = 0; i < this.marks.length; i++){
-            total = total + this.marks[i].mark
+            for(let i = 0; i < this.marks.length; i++){
+                total = total + this.marks[i].mark
+                left = left + 20
+            //     document.getElementById("graph").insertAdjacentHTML('afterbegin', '<div class="point" style="top: 10px; left: 10px; height: 12px; width: 12px; background-color: blue;border-radius: 6px;position: absolute;z-index: 10;"></div>')
+            }
+            return total / this.marks.length
         }
-        this.average = total / this.marks.length
-    }
-};
+    },
+}
 </script>
 
 
@@ -190,6 +200,7 @@ h2{
     height: 100%;
     background-color: #242424;
     padding: 25px;
+    box-sizing: border-box;
 }
 
 /* program */

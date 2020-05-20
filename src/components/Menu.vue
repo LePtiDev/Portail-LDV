@@ -244,7 +244,7 @@
 
 #button a{
     padding: 0 5px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -261,7 +261,7 @@
 
 #buttons a{
     padding: 0 5px;
-    font-size: 14px;
+    font-size: 12px;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -327,10 +327,10 @@
 
 @media screen and (min-width: 790px) and (max-width: 1120px) {
     #button a{
-    font-size: 10px;
+    font-size: 9px;
     }
     #buttons a{
-        font-size: 9px;
+        font-size: 8px;
     }
     #copyright{
         font-size: 9px;
@@ -347,10 +347,10 @@
 }
 @media screen and (min-width: 601px) and (max-width: 789px) {
     #button a{
-    font-size: 8px;
+    font-size: 5.5px;
     }
     #buttons a{
-        font-size: 6.5px;
+        font-size: 4.5px;
         line-height: 14px;
     }
     #copyright{

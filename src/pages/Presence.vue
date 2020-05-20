@@ -44,7 +44,7 @@
 
         </section>
 
-        <present-button-mobile></present-button-mobile>
+        <checkbuttonreleve></checkbuttonreleve>
 
     </div>
 
@@ -53,10 +53,10 @@
 <script>
 
     import CheckButton from "../components/CheckButton";
-    import PresentButtonMobile from "../components/PresentButtonMobile";
+    import Checkbuttonreleve from "../components/checkbuttonreleve";
     export default {
         name: "Presence",
-        components: {PresentButtonMobile, CheckButton}
+        components: {Checkbuttonreleve, CheckButton}
     }
 </script>
 

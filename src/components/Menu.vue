@@ -4,6 +4,10 @@
         <div @click="animation()" class="menu-btn">
             <div class="menu-btn__burger"></div>
         </div>
+        <div class="head-burger">
+            <img id="logo-burger" src="./../assets/IIMLogo.png">
+            <img src="./../assets/Puech-Antoine.jpg" id="photoProfil-burger">
+            </div>
         <div id="menu">
         <div class="logo">
             <img src="./../assets/IIMLogo.png">
@@ -41,14 +45,14 @@
 
             <div id="buttons">
                 <img src="./../assets/horloge.png">
-                <router-link to="#">
+                <router-link to="/Absence">
                 <a>Absences</a>
                 </router-link>
             </div>
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <router-link to="./CoursView">
+                <router-link to="/CoursView">
                 <a> devinci online</a>
                 </router-link>
 
@@ -140,12 +144,15 @@
   height: 80px;
   cursor: pointer;
   transition: all .5s ease-in-out;
-  z-index: 10;
+  z-index: 99999;
   /* border: 3px solid #fff; */
+}
+.head-burger{
+    display: none;
 }
 .menu-btn__burger {
   width: 35px;
-  height: 8px;
+  height: 6px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -156,7 +163,7 @@
   content: '';
   position: absolute;
   width: 50px;
-  height:8px;
+  height:6px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -167,7 +174,7 @@
   content: '';
   position: absolute;
   width: 30px;
-  height: 8px;
+  height: 6px;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -182,12 +189,12 @@
 .menu-btn.open .menu-btn__burger::before {
   transform: rotate(45deg) translate(35px, -35px);
   width: 40px;
-  height:8px;
+  height:6px;
 }
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
   width: 40px;
-  height:8px;
+  height:6px;
 }
 /*/////////////////////////////////*/
 #menu {
@@ -373,10 +380,31 @@
         position: absolute;
         left: -2000px;
         width: 100%;
-        z-index: 5;
+        z-index: 99999;
     }
     .direction{
-        text-align:center;
+        text-align:left;
+    }
+    .head-burger{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        background-color: #242424;
+        padding: 25px 0;
+        border-bottom: solid 2px #000000;
+        align-items: center;
+    }
+    .head-burger #logo-burger{
+        width: 40%;
+        position: relative;
+        left: 5%;
+    }
+    #photoProfil-burger{
+        width: 10%;
+        height: 10%;
+        position: relative;
+        left: 20%;
+        border-radius: 25px;
     }
     .mystyle{
     width: 100% !important;
@@ -386,8 +414,12 @@
     }
     .menu-btn{
         display: flex;
+        position: absolute;
+        top: 2%;
     }
-    
+    .logo{
+        display: none;
+    }
     .logo img {
         width: 40%;
     }
@@ -405,10 +437,6 @@
     }
     #buttons{
         height: 30px;
-        justify-content: center;
-    }
-    #button{
-        justify-content: center;
     }
     #copyright{
         font-size: 12px;

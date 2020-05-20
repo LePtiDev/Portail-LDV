@@ -31,7 +31,7 @@
                     <div v-for="item in this.course" :key="item.id">
                         <DivSchedule :room="item.room" :course="item.course" :date="item.date"></DivSchedule>
                     </div>
-                    <a class="see-more" href="#">Voir mon emploi du temps</a>
+                    <a class="see-more" href="/#/EmploieDuTemps">Voir mon emploi du temps</a>
                 </div>
                 <div class="space"></div>
                 <div class="section absence">
@@ -39,7 +39,7 @@
                     <div v-for="item in this.absence" :key="item.id">
                         <DivAbsence :reason="item.reason" :course="item.course" :date="item.date" :status="item.status"></DivAbsence>
                     </div>
-                    <a class="see-more" href="#">Voir toutes mes absences</a>
+                    <a class="see-more" href="/#/Absence">Voir toutes mes absences</a>
                 </div>
                 <div class="space"></div>
                 <div class="section mark">
@@ -47,7 +47,7 @@
                     <div v-for="item in this.marks" :key="item.id">
                         <DivMarks :course="item.course" :mark="item.mark" :comment="item.comment"></DivMarks>
                     </div>
-                    <a class="see-more" href="#">Voir toutes mes notes</a>
+                    <a class="see-more" href="/#/Marks">Voir toutes mes notes</a>
                 </div>
             </div>
             <div class="rows row-three">

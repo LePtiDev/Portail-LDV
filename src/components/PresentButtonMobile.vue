@@ -15,28 +15,6 @@
     export default {
         name: "PresentButtonMobile"
     }
-
-    method : {
-        const startingMinutes = 15;
-
-        let time = startingMinutes * 60;
-
-        const timerEl = document.getElementById('timer');
-
-        setInterval(updateTimer, 1000);
-
-        function updateTimer() {
-
-            const minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            timerEl.innerHTML = `${minutes}:${seconds}`;
-            time--;
-        }
-    }
-
 </script>
 
 <style scoped>
@@ -45,16 +23,16 @@
         display: none;
         padding: 17px 77px;
         background-color: #27AE60;
-        border-radius: 4px;
+        border-radius: 3px;
         font-family: Montserrat, sans-serif;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         color: white;
         text-decoration: none;
         border: none;
     }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 450px)
     {
         .present-btn-mobile {
             display: initial;

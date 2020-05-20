@@ -40,21 +40,23 @@
                     vous devez vous mettre présent lorsque vous êtes dans la salle ! </p>
             </div>
 
-            <present-button-pc></present-button-pc>
+            <checkButton id="btn-pc"></checkButton>
 
         </section>
 
         <present-button-mobile></present-button-mobile>
+
     </div>
 
 </template>
 
 <script>
-    import PresentButtonPc from "../components/PresentButtonPc";
+
+    import CheckButton from "../components/CheckButton";
     import PresentButtonMobile from "../components/PresentButtonMobile";
     export default {
-        name: "PresenceContent",
-        components: {PresentButtonMobile, PresentButtonPc}
+        name: "Presence",
+        components: {PresentButtonMobile, CheckButton}
     }
 </script>
 
@@ -116,8 +118,9 @@
     }
 
     #container {
+        width: 100%;
         background-color: #121212;
-        margin: 0 3vw;
+        margin: 0 2vw;
         font-family: Montserrat, sans-serif;
         font-weight: bold;
         /*border: 1px solid white;*/
@@ -125,8 +128,8 @@
 
     .top {
         /*border: 1px solid green;*/
-        padding: 40px 0;
-        font-size: 20px;
+        padding: 30px 0;
+        font-size: 15px;
     }
 
     #presence {
@@ -138,21 +141,23 @@
     .content {
         background-color: #242424;
         text-align: center;
-        padding: 100px 0;
+        padding: 75px 0;
+        margin-bottom: 50px;
         /*border: 1px solid orange;*/
+        border-radius: 3px;
         box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
     }
 
     .datas {
         display: grid;
-        grid-template-columns: auto 325px 325px 325px auto;
+        grid-template-columns: auto 250px 250px 250px auto;
         /*border: 1px solid red;*/
     }
 
     .class {
         display: grid;
         align-content: space-evenly;
-        height: 200px;
+        height: 150px;
         /*border: 1px solid #3e3e3e;*/
         border-right: 1px solid #121212;
         grid-column: 2/3;
@@ -166,7 +171,7 @@
     .schedule {
         display: grid;
         align-content: space-evenly;
-        height: 200px;
+        height: 150px;
         /*border: 1px solid #3e3e3e;*/
         border-right: 1px solid #121212;
         grid-column: 3/4;
@@ -175,31 +180,40 @@
     .teacher {
         display: grid;
         align-content: space-evenly;
-        height: 200px;
+        height: 150px;
         /*border: 1px solid #3e3e3e;*/
         grid-column: 4/5;
     }
     h2 {
-        font-size: 22px;
+        font-size: 18px;    /*22 xd*/
     }
     h3 {
-        font-size: 17px;
+        font-size: 15px;    /*17 xd*/
     }
     .paddg_spec{
         margin-bottom: 13px;
     }
 
     h4 {
-        font-size: 12px;
+        font-size: 11px;   /*12 xd*/
         font-weight: normal;
     }
 
     .info {
         /*border: 1px solid purple;*/
-        font-size: 14px;
+        font-size: 12px;    /*14 xd*/
     }
     #i {
-        padding: 70px;
+        padding: 55px;
+    }
+
+    #btn-pc {
+        width: 275px;
+        margin: 0 auto;
+    }
+
+    #btn-mobile {
+        display: none;
     }
 
 
@@ -222,7 +236,6 @@
         }
 
         .class {
-            height: 150px;
             margin: 0 12%;
             border-right: none;
             border-bottom: 1px solid #111111;
@@ -238,7 +251,6 @@
         }
 
         .schedule {
-            height: 150px;
             border-right: none;
             margin: 0 12%;
             border-bottom: 1px solid #111111;
@@ -249,7 +261,6 @@
 
 
         .teacher {
-            height: 150px;
             border-right: none;
             margin: 0 12%;
             /*border: 1px solid #3e3e3e;*/
@@ -259,26 +270,43 @@
 
     }
 
-    @media screen and (max-width: 425px)
+    @media screen and (max-width: 450px)
     {
 
         #container {
             text-align: center;
         }
 
-        .content {
-            margin: 20px 0 20px;
-            padding: 0;
-        }
-
         .top {
             display: none;
+        }
+
+        .content {
+            margin: 10px 0;
+            padding: 0 0 15px 0;
+        }
+
+        .schedule {
+            height: 125px;
+        }
+
+        .class, .schedule, .teacher {
+            align-content: center;
         }
 
         #i {
             font-size: 10px;
             font-weight: normal;
-            padding: 40px 5%;
+            padding: 20px 11%;
+        }
+
+        #btn-pc {
+            display: none;
+        }
+
+        #btn-mobile {
+            display: initial;
+            width: 100%;
         }
 
     }

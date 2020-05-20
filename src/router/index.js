@@ -1,20 +1,16 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import EmploieDuTemps from '../pages/EmploieDuTemps'
-import Dashboard from '../pages/dashboard'
-import PresenceContent from "../pages/PresenceContent";
-import ProfileContent from "../pages/ProfileContent";
+import VueRouter from 'vue-router';
+import Presence from "../pages/Presence";
+
+
 
 
 Vue.use(VueRouter)
 
 const routes = [
-    { path: '/EmploieDuTemps', component: EmploieDuTemps},
-    { path: '/Dashboard', component: Dashboard},
-    { path: '/Profile', component: ProfileContent},
-    { path: '/Presence', component: PresenceContent},
+  { path: '/Presence', component: Presence},
 ]
 
 export default new VueRouter({
-    routes
+  routes
 })

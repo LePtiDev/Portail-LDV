@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <h2>Notes</h2>
+        <h2>NOTES</h2>
         <div class="grid">
             <div class="row-one">
                 <div class="section section-program">

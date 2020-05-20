@@ -1,7 +1,7 @@
 <template>
     <div class="allContent">
         <div class="allContentAbsence">
-            <h1>Absences</h1>
+            <h1>ABSENCES</h1>
             <div id="head">
                 <p>Cours</p>
                 <p>Date</p>
@@ -44,7 +44,7 @@ export default {
     position: absolute;
     left: 17vw;
     top: 0;
-    padding: 40px;
+    padding: 25px 35px 35px 35px;
 }
 .allContentAbsence{
     font-family: 'Montserrat';
@@ -57,7 +57,9 @@ export default {
     width: 100%;
 }
 h1{
-
+    font-size: 20px;
+    color: white;
+    filter: opacity(0.5);
 }
 
 </style>

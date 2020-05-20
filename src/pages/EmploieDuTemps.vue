@@ -187,7 +187,7 @@ export default {
 }
 
 .allContent{
-    padding: 40px;
+    padding: 25px 35px 35px 35px;
     color: #ffffff;
     width: 83vw;
     font-family: 'Montserrat';

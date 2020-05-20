@@ -60,7 +60,7 @@
 
             <div id="buttons">
                 <img src="./../assets/oeil.png">
-                <router-link to="/AddEvent">
+                <router-link to="#">
                 <a>Promotion école</a>
                 </router-link>
             </div>

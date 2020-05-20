@@ -119,9 +119,7 @@
 
     #container {
         width: 100%;
-        background-color: #121212;
         margin: 0 2vw;
-        font-family: Montserrat, sans-serif;
         font-weight: bold;
         /*border: 1px solid white;*/
     }

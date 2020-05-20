@@ -14,43 +14,49 @@
 
                 <img src="../assets/antoine-drn.jpg" class="pp" width="100%" height="auto">
                 <h3> Antoine DROUIN <br/>
-                    <span style="font-weight: normal; font-size: 17px; color: #FF8800"> A2DW1 </span></h3>
+                    <span style="font-weight: normal; font-size: 14px; color: #FF8800"> A2DW1 </span></h3>
                 <button class="modif"> Faire une demande de modifications </button>
 
             </div>
 
             <div class="info2">
                 <form>
-                    <label> ID DEVINCI </label><br/>
-                    <input disabled type="text" value="AD180628"><br/>
+                    <div class="label"> ID DEVINCI </div>
+                    <div class="input"> AD180628 </div>
 
-                    <label> NUMÉRO DE BADGE </label><br/>
-                    <input disabled type="text" value="705655"><br/>
+                    <div class="label"> NUMÉRO DE BADGE </div>
+                    <div class="input"> 705655 </div>
 
-                    <label> ID. ADMINISTRATIF </label><br/>
-                    <input disabled type="text" value="705655"><br/>
+                    <div class="label"> ID. ADMINISTRATIF </div>
+                    <div class="input"> 705655 </div>
 
-                    <label> INE/BEA </label><br/>
-                    <input disabled type="text" value="2510083981D"><br/>
+                    <div class="label"> INE/BEA </div>
+                    <div class="input"> 2510083981D </div>
 
-                    <label> ADRESSE </label><br/>
-                    <textarea disabled name="adress" rows="3"> 47 rue Jules Ferry 91380 Chilly-Mazarin FRANCE </textarea><br/>
+                    <div class="label"> ADRESSE </div>
+                    <div class="input"> 47 rue Jules Ferry <br/>
+                        91380 Chilly-Mazarin <br/>
+                        FRANCE </div>
 
-                    <label> TÉLÉPHONE </label><br/>
-                    <textarea disabled name="phone" rows="2"> 01XXXXXXXX 06XXXXXXXX </textarea><br/>
+                    <div class="label"> TÉLÉPHONE </div>
+                    <div class="input"> 01XXXXXXXX <br/>
+                        06XXXXXXXX </div>
                 </form>
             </div>
 
             <div class="info3">
                 <form>
-                    <label> IDENTIFIANT </label><br/>
-                    <textarea disabled name="phone" rows="2"> antoine.drouin@edu.devinci.fr antoine.drouin@hotmail.fr </textarea><br/>
+                    <div class="label"> IDENTIFIANT </div>
+                    <div class="input"> antoine.drouin@edu.devinci.fr <br/>
+                        antoine.drouin@hotmail.fr </div>
 
-                    <label> NAISSANCE </label><br/>
-                    <input disabled type="text" value="06/01/1999 Longjumeau"><br/>
+                    <div class="label"> NAISSANCE </div>
+                    <div class="input"> 06/01/1999 Longjumeau </div>
 
-                    <label> CONTACT D'URGENCE </label><br/>
-                    <input id="last-input" disabled type="text" value="Monsieur Drouin 06XXXXXXXX Père"><br/>
+                    <div class="label"> CONTACT D'URGENCE </div>
+                    <div class="input"> Monsieur Drouin <br/>
+                        06XXXXXXXX <br/>
+                        Père </div>
 
                 </form>
 
@@ -66,7 +72,7 @@
 
 <script>
     export default {
-        name: "Profile"
+        name: "Compte"
     }
 </script>
 
@@ -120,42 +126,46 @@
 
 
 
-
-    body {
-        font-family: Montserrat, sans-serif;
-        background-color: #121212;  /*fond noir*/
-        color: #FFFFFF;
+    #container {
+        width: 100%;
+        margin: 0 2vw;
+        font-weight: bold;
+        /*border: 1px solid white;*/
     }
 
 
     .top {
-        margin-bottom: 10vh;
-        padding: 4vh 1vw;
+        padding: 30px 0;
+        display:flex;
+        justify-content: space-between;
         /*border: 1px solid green;*/
     }
 
     #account {
-        float: left;
+        /*float: left;*/
         color: rgba(255,255,255,0.51)
     }
 
     .lang {
-        float: right;
+        /*float: right;*/
         font-weight: bold;
-        font-size: 17px;
+        font-size: 15px;
     }
 
 
 
     .content {         /*base du grid pour les infos*/
         display: grid;
-        grid-template-columns: 8% 18% 25% 29% 15%;
+        grid-template-columns: auto 18% 25% 33% auto;
         column-gap: 40px;
+        padding-top: 5vh;
         /*border: 1px solid red;*/
     }
 
     .info1 {
         grid-column: 2/3;
+        height: 100%;
+        padding-top: 60px;
         text-align: center;
         /*border: 1px solid white;*/
     }
@@ -166,17 +176,17 @@
     }
 
     h3 {
-        margin: 50px 0;
+        margin: 30px 0;
     }
 
     .modif {
         background-color: #242424;
         padding: 20px 5px;
-        border: 2px solid #FF8800;
-        border-radius: 4px;
+        border: 1px solid #FF8800;
+        border-radius: 3px;
         font-family: Montserrat, sans-serif;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 13px;
         color: #FFFFFF;
     }
 
@@ -191,43 +201,34 @@
         /*border: 1px solid white;*/
     }
 
-    input {
+    .input {
         width: 85%;
-        margin: 5px 0 35px 0;
-        padding: 7px 5px;
+        margin: 5px 0 30px 0;
+        padding: 7px 7px;
         background-color: #242424;
         border-style: none;
-        border-radius: 4px;
+        border-radius: 3px;
         font-family: Montserrat, sans-serif;
+        font-size: 15px;
+        font-weight: normal;
         color: #FFFFFF;
+        overflow: auto;
     }
 
-    textarea {
-        width: 85%;
-        margin: 5px 0 35px 0;
-        padding: 7px 5px;
-        background-color: #242424;
-        border-style: none;
-        border-radius: 4px;
-        font-family: Montserrat, sans-serif;
-        color: #FFFFFF;
-    }
-
-
-    h3, #account, .info2 label, .info3 label {
+    h3, #account, .info2 .label, .info3 .label {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     /*Bouton qui s'affiche en fonction de taille de l'écran*/
     .modif2 {
         background-color: #242424;
         padding: 20px 5px;
-        border: 2px solid #FF8800;
-        border-radius: 4px;
+        border: 1px solid #FF8800;
+        border-radius: 3px;
         font-family: Montserrat, sans-serif;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 13px;
         color: #FFFFFF;
         display: none;
     }
@@ -250,6 +251,7 @@
         }
 
         .top {
+            padding: 0;
             margin-bottom: 5vh;
         }
 
@@ -257,34 +259,22 @@
         .content {
             display: flex;
             flex-direction: column;
-            padding: 0 4vw;
         }
 
         .info1 {
             width: 50%;
+            padding: 0;
             margin: 0 auto;
         }
 
 
-        input {
+        .input {
             width: 100%;
-            margin: 5px 0 35px 0;
             padding: 7px 5px;
-        }
-
-        textarea {
-            width: 100%;
-            margin: 5px 0 35px 0;
-            padding: 7px 5px;
-        }
-
-        #last-input {
-            margin: 5px 0 15px 0;
         }
 
         #btn-center {
-            padding: 0 4vw;
-            text-align: center;
+            width: 100%;
             margin-bottom: 40px;
         }
     }

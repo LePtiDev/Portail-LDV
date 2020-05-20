@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .section-mark{
     height: 100px;
     width: 100%;

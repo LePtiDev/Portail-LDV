@@ -52,7 +52,7 @@
 
             <div id="buttons">
                 <img src="./../assets/reglage.png">
-                <router-link to="/CoursView">
+                <router-link to="#">
                 <a> devinci online</a>
                 </router-link>
 

@@ -3,8 +3,8 @@
         <div class="allContentAbsence">
             <h1>Absences</h1>
                 <div id="head" @click="justify()">
-                    <p>Cours</p>
-                    <p>Date</p>
+                    <p id="cours">Cours</p>
+                    <p id="date">Date</p>
                 </div>
                 <div v-for="item in allAbsence" :key="item.id">
                     <DivAllAbsence :id="item.id" :intervenant="item.intervenant" :course="item.course" :days="item.days" :month="item.month" :year="item.year" :justify="item.justify" :reason="item.reason"></DivAllAbsence>
@@ -52,29 +52,45 @@ export default {
 </script>
 
 <style scoped>
-
 .allContent{
+    width: 83vw;
+    position: absolute;
+    left: 17vw;
+    top: 0;
+    padding: 25px 35px 35px 35px;
+}
+.allContentAbsence{
     font-family: 'Montserrat';
     color: white;
 }
 #head{
     display: flex;
-    justify-content: space-between;
-    padding: 30px 12% 0;
-    width: 45vw;
+    justify-content: space-around;
+    padding: 30px 0px  0px 0;
+    width: 100%;
+}
+#cours{
+    position: relative;
+    right: 12%;
 }
 h1{
-    padding: 15px 0 0 30px;
+    font-size: 20px;
+    color: white;
+    filter: opacity(0.5);
 }
 #total{
     color: white;
     padding: 0 5px;
 }
+
 .totalAbsence{
     justify-content: flex-end;
     display: flex;
     color: white;
     padding: 0 5%;
 }
-
+#date{
+    position: relative;
+    right: 19%;
+}
 </style>

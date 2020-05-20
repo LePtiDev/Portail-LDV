@@ -9,8 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
+    "moment": "^2.25.3",
+    "v-mask": "^2.1.0",
     "vue": "^2.6.11",
-    "vue-cli": "^2.9.6",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {

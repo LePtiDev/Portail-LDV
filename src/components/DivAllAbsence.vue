@@ -54,8 +54,8 @@ export default {
 
 .contentAbsence{
     background-color: #272727;
-    margin: 30px 30px;
-    width: 78vw;
+    margin: 30px 0px 0px 0px;
+    width: 100%;
     height: 15vh;
 }
 #index{
@@ -90,10 +90,9 @@ export default {
 }
 #infoAbsence{
     position: relative;
-    left: 15%;
-    width: 15%;
+    left: 20%;
+    width: 25%;
     text-align: center;
-    padding: 0 25px;
 }
 #absence{
     text-transform: uppercase;
@@ -105,15 +104,15 @@ export default {
 .hide{
     display: none;
 }
-.validate{
-    color: #27AE60;
+.validate>p{
+    color: #27AE60 !important;
 }
 .absent{
     background-color: #E74C3C;
     padding: 10px 25px !important;
     border-radius: 10px;
 }
-.waiting{
-    color: #EE7F01;
+.waiting>p{
+    color: #EE7F01 !important;
 }
 </style>

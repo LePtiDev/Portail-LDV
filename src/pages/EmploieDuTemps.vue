@@ -8,7 +8,7 @@
                 <p id="month">Mois</p>
             </div>
             <div id="btn">
-                <button>+ Ajouter un évènement</button>
+                <a href="/#/AddEvent" class="button">+ Ajouter un évènement</a>
             </div>
         </section>
 
@@ -115,7 +115,7 @@ export default {
                 this.salle = this.tab[index].salle
                 this.name = this.tab[index].name
 
-                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%; display: flex; flex-wrap: wrap; z-index:'+index+' "><div style="display: flex; flex-wrap: wrap; height: 15%; padding: 2px;"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p><p id="salle">['+this.salle+']</p> <p id="name">'+this.name+'</p></div>');
+                document.getElementById(this.jours).insertAdjacentHTML('afterbegin', '<a href="/#/CoursView"><div id="' + this.jours + '" class="'+ this.type +'" style="height:'+ this.height(this.start, this.end, this.jours) +'%; top:'+ this.when(this.start) +'%; display: flex; flex-wrap: wrap; z-index:'+index+' "><div style="display: flex; flex-wrap: wrap; height: 15%; padding: 2px;"><p id="heure-cours">'+this.start+'h00 - '+this.end+'h00</p><p id="salle">['+this.salle+']</p> <p id="name">'+this.name+'</p></div></a>');
             }
         
     },
@@ -141,6 +141,7 @@ export default {
 <style>
 *{
     margin: 0;
+    text-decoration: none;
   }
   .cours{
     width: 100%;
@@ -181,21 +182,30 @@ export default {
 </style>
 
 <style scoped>
+#week{
+    color: #FF8800;
+}
+
 .allContent{
-    margin: 0 25px;
-    color: #ffffff;
-    width: 100vw;
+    padding: 25px 35px 35px 35px;
+    color: #ffffff !important;
+    width: 83vw;
     font-family: 'Montserrat';
+    position: absolute;
+    left: 17vw;
+    top:0;
+    box-sizing: border-box;
 }
 /* debut header */
 .head{
-    padding: 20px 0 10px;
+    margin: 0px 0 40px;
   }
 #edt{
-    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0 2px;
+    font-size: 20px;
+    color: white;
+    filter: opacity(0.5);
 }
 
 #choix{
@@ -212,7 +222,8 @@ export default {
 #btn{
     text-align: right;
 }
-#btn button{
+
+.button{
     background-color: #FF8800;
     border: none;
     cursor: pointer;
@@ -228,7 +239,7 @@ export default {
 /* haut du contenu de ledt */
 .content{
     background-color:#272727;
-    height: 80%;
+    min-height: 80%;
 }
 #title{
     text-align: center;
@@ -270,6 +281,7 @@ export default {
     height: 60vh;
     padding-bottom: 2px;
     padding: 0 5px;
+    margin: 0px 0px 40px 0px;
 }
 .heures p{
     font-size: 13px;
@@ -283,36 +295,42 @@ export default {
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #mardi{
     height: 60vh;
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #mercredi{
     height: 60vh;
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #jeudi{
     height: 60vh;
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #vendredi{
     height: 60vh;
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #samedi{
     height: 60vh;
     width: 10vw;
     border: solid 1px #ffffff;
     position: relative;
+    margin: 0px 0px 40px 0px;
 }
 #day{
     font-size: 14px;

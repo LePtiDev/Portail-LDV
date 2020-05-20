@@ -1,16 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import EmploieDuTemps from '../pages/EmploieDuTemps'
-import Dashboard from '../pages/Dashboard'
-import Absence from '../pages/Absence'
 
+import Dashboard from '../pages/dashboard'
+import EmploieDuTemps from '../pages/EmploieDuTemps'
+import Ressources from '../pages/Ressources'
+import CoursView from '../pages/CoursView'
+import AddEvent from '../pages/AddEvent'
+import Marks from '../pages/Marks'
+import Absence from '../pages/Absence'
 
 Vue.use(VueRouter)
 
 const routes = [
+    { path: '/', component: Dashboard },
     { path: '/EmploieDuTemps', component: EmploieDuTemps},
-    { path: '/', component: Dashboard},
-    { path: '/Absence', component: Absence}
+    { path: '/Ressources', component: Ressources},
+    { path: '/CoursView', component: CoursView},
+    { path: '/AddEvent', component: AddEvent},
+    { path: '/Marks', component: Marks},
+    { path: '/Absence', component: Absence},
 ]
 
 export default new VueRouter({

@@ -20,10 +20,13 @@ export default {
   *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat';
+    color: white;
+    box-sizing: border-box;
   }
 
   #app{
     display: flex;
-    background-color: black;
+    background-color: #121212;
   }
 </style>

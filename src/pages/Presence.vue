@@ -44,7 +44,7 @@
 
         </section>
 
-        <checkbuttonreleve></checkbuttonreleve>
+        <div id="btn-mobile"><check-button></check-button></div>
 
     </div>
 
@@ -53,10 +53,9 @@
 <script>
 
     import CheckButton from "../components/CheckButton";
-    import Checkbuttonreleve from "../components/checkbuttonreleve";
     export default {
         name: "Presence",
-        components: {Checkbuttonreleve, CheckButton}
+        components: {CheckButton}
     }
 </script>
 
@@ -304,7 +303,6 @@
 
         #btn-mobile {
             display: initial;
-            width: 100%;
         }
 
     }
